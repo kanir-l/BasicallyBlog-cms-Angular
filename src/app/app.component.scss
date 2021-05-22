@@ -1,0 +1,44 @@
+* {
+    font-family: 'Alegreya Sans SC', sans-serif;
+    color: #ffffff;
+}
+
+.app-component {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url("/../assets/img/hero-image.jpeg");
+    z-index: -1;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    padding: 0;
+   
+   
+    header {
+        width: 100%;
+        
+        img {
+            width: 75px;
+            height: 75px;
+            margin: 10px;
+        }
+
+        p {
+            position: absolute;
+            top: 45px;
+            left: 80px;
+        }
+    }
+
+    footer {
+        bottom: 0;
+        right: 0;
+        margin: 10px;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        justify-content: space-between;
+    }
+}
+

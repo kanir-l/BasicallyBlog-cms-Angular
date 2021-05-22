@@ -1,0 +1,19 @@
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@100&display=swap" rel="stylesheet">
+
+<div class = "create-blog">
+    <div class = "input-blog">
+        <h3>Create the blog</h3>
+            <div class = "input-button">
+            <input type="text" placeholder="Your blog name" #title (keyup) = "inputTitle(title.value)" />
+            <button (click) = "createBlog(title.value)">Add Blog</button>  
+        </div>
+    </div>
+</div>
+
+<app-blogs></app-blogs>
+
+
+
+
+

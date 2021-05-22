@@ -1,0 +1,46 @@
+.print-blog {
+    width: 100%;
+    display: flex;
+    margin: 20px;
+
+    .blog-box {
+        background-image: url("/../assets/img/box-image.jpeg");
+        background-size: cover;
+        background-position: top;
+        opacity: 75%;
+        width: 400px;
+        height: 250px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+
+        p {
+            font-size: 1rem;
+            color: #3b3b3b;
+            width: 400px;
+            text-align: center;
+            background: #ffffff;
+
+            b {
+                font-size: 1.6rem;
+                font-weight: bold;
+                font-style: italic;
+                color: #000000;
+            }
+        }
+    }
+
+    button {
+        border: 0;
+        height: 250px;
+        border-radius: 2px;
+        margin-right: 1px;
+        background: #ece0e0;
+        
+        img {
+            width: 20px;
+        }
+    }
+}

@@ -1,0 +1,18 @@
+<app-posts></app-posts>
+
+<div class = "create-post">
+    <div class = "post-container">
+       
+        <div class = "input-post">
+        <h3>Create the post. Blog: {{id}}</h3>
+        <h3>Your Post Title</h3>    
+        <input type="text" placeholder="Title" #title (keyup) = "inputTitle(title.value)" />
+        <h3>Your Content</h3>  
+        <textarea type="text" placeholder="Content" #content (keyup) = "inputContent(content.value)"></textarea>
+
+        <div class = "button-box">
+            <button (click) = "createPost(title.value, content.value, id)">Add Blog</button>   
+        </div>
+        </div>
+    </div>
+</div>

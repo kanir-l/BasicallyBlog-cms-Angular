@@ -1,0 +1,37 @@
+* {
+    font-family: 'Alegreya Sans SC', sans-serif;
+}
+
+.posts {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .hero {
+        width: 80%;
+        height: 300px;
+        color: #3a3a3a;
+        background-image: url("/../assets/img/box-image.jpeg");
+        background-size: cover;
+        background-position: top;
+        opacity: 75%;
+        display: flex;
+        align-items: center;
+        margin-bottom: 60px;
+
+        h3 {
+            width: 100%;
+            font-size: 3rem;
+            padding-left: 100px;
+            background: #ffffff;
+            opacity: 80%;
+        }
+    }
+  
+    .all-posts {
+        width: 80%;
+        border: 1px solid #ffffff;
+    } 
+}

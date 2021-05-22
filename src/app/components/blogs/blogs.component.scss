@@ -1,0 +1,23 @@
+* {
+    font-family: 'Alegreya Sans SC', sans-serif;
+}
+
+.blogs {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    h3 {
+        font-size: 2.2rem;
+    }
+  
+    .all-blogs {
+        width: 80%;
+        border: 1px solid #ffffff;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    } 
+}
