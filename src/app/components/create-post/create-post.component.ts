@@ -36,7 +36,7 @@ export class CreatePostComponent implements OnInit {
     this.service.addPost(inputPostTitle, inputPostContent, id).subscribe((newPost: Post)=>{
       this.posts.push(newPost)
 
-      this.router.navigateByUrl('create-post/Blogs/' + this.id)
+      this.router.navigateByUrl('posts/Blogs/' + this.id)
     })
   }
 }

@@ -1,4 +1,5 @@
 
+import { Location } from '@angular/common';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
@@ -19,7 +20,7 @@ export class CreateBlogComponent implements OnInit {
     this.clickAdd.emit(this.blogs)
   }    */
 
-  constructor(private service: BlogService, private router: Router) { }
+  constructor(private service: BlogService, private router: Router, private locations: Location) { }
 
   ngOnInit(): void {
   
@@ -32,8 +33,8 @@ export class CreateBlogComponent implements OnInit {
   createBlog(inputBlogTitle: string) {
     this.service.addBlog(inputBlogTitle).subscribe((newBlog: Blog)=>{
       this.blogs.push(newBlog)
-
-      this.router.navigateByUrl('/create-blog')
+  
+      this.router.navigateByUrl('/blogs')
     })
   }
 }

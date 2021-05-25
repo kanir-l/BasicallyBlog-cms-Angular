@@ -27,16 +27,6 @@
                 display: flex;
                 align-items: center;
                 padding-left: 10px;
-
-                button {
-                    border: 0;
-                    height: 20px;
-                    background: transparent;
- 
-                    img {
-                        width: 20px;
-                    }
-                }
             }
 
             p {
@@ -46,6 +36,16 @@
 
             u {
                 font-family: 2rem;
+            }
+        }
+
+        button {
+            border: 0;
+            height: 20px;
+            background: transparent;
+
+            img {
+                width: 20px;
             }
         }
     }

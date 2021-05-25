@@ -19,7 +19,6 @@ export class PostsComponent implements OnInit {
   constructor(private service: PostService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-
     this.route.paramMap.subscribe((params) => {
       this.id = parseInt(params.get('id'))
     })

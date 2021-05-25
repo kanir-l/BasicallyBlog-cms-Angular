@@ -1,19 +1,18 @@
 <div class = "print-post">
     <div class = "print-box">
-        <a>
-            <div class = "post-img">
-                <button>
-                    <img [src] = 'imageEdit'>
-                </button> 
-                <button (click) = 'handleRemove()'>
-                    <img [src] = 'imageBin'>
-                </button> 
-            </div>
+        <a routerLink="/comments-in-post/Posts/{{post.id}}" routerLinkActive="active" [routerLinkActiveOptions] = "{ exact: true }">
+            <div class = "post-img"></div>
             <u>{{post.title}}</u>
             <br>
             <p>{{post.content}}</p>
             <br>
             <i>Publised: {{post.created}}</i>
         </a>
+        <button>
+            <img [src] = 'imageEdit'>
+        </button> 
+        <button (click) = 'handleRemove()'>
+            <img [src] = 'imageBin'>
+        </button> 
     </div>
 </div>

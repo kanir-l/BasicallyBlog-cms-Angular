@@ -12,6 +12,7 @@ import { CreatePostComponent } from './components/create-post/create-post.compon
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { PostsComponent } from './components/posts/posts.component';
 import { PrintPostComponent } from './components/print-post/print-post.component';
+import { CommentsInPostComponent } from './components/comments-in-post/comments-in-post.component';
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import { PrintPostComponent } from './components/print-post/print-post.component
     PageNotFoundComponent,
     PostsComponent,
     PrintPostComponent,
+    CommentsInPostComponent,
   ],
   imports: [
     BrowserModule,
