@@ -11,8 +11,8 @@ import { PostService } from 'src/app/services/post.service';
   styleUrls: ['./posts.component.scss']
 })
 export class PostsComponent implements OnInit {
-  posts: Post[] = [] //Getting Post array
-  blog: Blog //Getting just one blog sent from service
+  posts: Post[] = [] //Making variable for Post array
+  blog: Blog //Getting just one specific blog sent from service
 
   id: number = 0
  

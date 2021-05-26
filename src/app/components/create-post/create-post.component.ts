@@ -24,14 +24,6 @@ export class CreatePostComponent implements OnInit {
     }) 
   }
 
-  inputTitle(inputItem: string): void {
-    this.title = inputItem
-  }
-
-  inputContent(inputItem: string): void {
-    this.content = inputItem
-  }
-
   createPost(inputPostTitle: string, inputPostContent: string, id: number) {
     this.service.addPost(inputPostTitle, inputPostContent, id).subscribe((newPost: Post)=>{
       this.posts.push(newPost)

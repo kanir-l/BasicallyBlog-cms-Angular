@@ -1,0 +1,15 @@
+<div class = "create-comment">
+    <div class = "comment-container">
+       
+        <div class = "input-comment">
+        <h3>Create the comment. Post: {{id}}</h3>
+        <h3>Your comment</h3>   
+
+        <input type="text" placeholder="Text" #text required />
+       
+        <div class = "button-box">
+            <button (click) = "createComment(text.value, id)">Add Blog</button>   
+        </div>
+        </div>
+    </div>
+</div>

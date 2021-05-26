@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BlogsComponent } from './components/blogs/blogs.component';
-import { CommentsInPostComponent } from './components/comments-in-post/comments-in-post.component';
+import { CommentsComponent } from './components/comments/comments.component';
 import { CreateBlogComponent } from './components/create-blog/create-blog.component';
 import { CreatePostComponent } from './components/create-post/create-post.component';
 import { IndexComponent } from './components/index/index.component';
@@ -12,7 +12,7 @@ const routes: Routes = [
   { path: '', component: IndexComponent },
   { path: 'blogs', component: BlogsComponent },
   { path: 'posts/Blogs/:id', component: PostsComponent},
-  { path: 'comments-in-post/Posts/:id', component: CommentsInPostComponent},
+  { path: 'comments/Posts/:id', component: CommentsComponent},
 
   { path: '**', component: PageNotFoundComponent }
 ];

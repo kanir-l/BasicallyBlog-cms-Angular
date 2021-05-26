@@ -1,8 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Blog } from 'src/app/models/Blog';
 import { Post } from 'src/app/models/Post';
-import { BlogService } from 'src/app/services/blog.service';
+
 
 @Component({
   selector: 'app-print-post',
@@ -27,6 +26,5 @@ export class PrintPostComponent implements OnInit {
    /*  this.route.paramMap.subscribe((params) => {
       this.id = parseInt(params.get('id'))
   }) */
-
 }
 }

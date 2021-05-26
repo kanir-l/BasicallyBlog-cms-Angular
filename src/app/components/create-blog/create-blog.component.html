@@ -5,8 +5,8 @@
     <div class = "input-blog">
         <h3>Create the blog</h3>
             <div class = "input-button">
-            <input type="text" placeholder="Your blog name" #title (keyup) = "inputTitle(title.value)" />
-            <button (click) = "createBlog(title.value)">Add Blog</button>  
+            <input type="text" placeholder="Your blog name" #title/>
+            <button (click) = "createBlog(title.value)" required>Add Blog</button>  
         </div>
     </div>
 </div>

@@ -13,21 +13,11 @@ import { BlogService } from 'src/app/services/blog.service';
 })
 export class CreateBlogComponent implements OnInit {
   @Input() blogs: Blog[] = []
-  title: string
-
-  /* @Output() clickAdd = new EventEmitter<Blog[]>()
-  handleAdd(): void {
-    this.clickAdd.emit(this.blogs)
-  }    */
 
   constructor(private service: BlogService, private router: Router, private locations: Location) { }
 
   ngOnInit(): void {
   
-  }
-
-  inputTitle(inputItem: string): void {
-    this.title = inputItem
   }
 
   createBlog(inputBlogTitle: string) {

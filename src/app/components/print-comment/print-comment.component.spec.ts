@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CommentsInPostComponent } from './comments-in-post.component';
+import { PrintCommentComponent } from './print-comment.component';
 
-describe('CommentsInPostComponent', () => {
-  let component: CommentsInPostComponent;
-  let fixture: ComponentFixture<CommentsInPostComponent>;
+describe('PrintCommentComponent', () => {
+  let component: PrintCommentComponent;
+  let fixture: ComponentFixture<PrintCommentComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CommentsInPostComponent ]
+      declarations: [ PrintCommentComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CommentsInPostComponent);
+    fixture = TestBed.createComponent(PrintCommentComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

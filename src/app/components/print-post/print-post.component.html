@@ -1,8 +1,8 @@
 <div class = "print-post">
     <div class = "print-box">
-        <a routerLink="/comments-in-post/Posts/{{post.id}}" routerLinkActive="active" [routerLinkActiveOptions] = "{ exact: true }">
+        <a routerLink="/comments/Posts/{{post.id}}" routerLinkActive="active" [routerLinkActiveOptions] = "{ exact: true }">
             <div class = "post-img"></div>
-            <u>{{post.title}}</u>
+            <h3>{{post.title}}</h3>
             <br>
             <p>{{post.content}}</p>
             <br>
