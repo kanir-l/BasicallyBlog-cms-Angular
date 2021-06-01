@@ -16,7 +16,7 @@ export class CreatePostComponent implements OnInit {
 
   id: number = 0
 
-  constructor(private service: PostService, private route: ActivatedRoute, private router: Router) {
+  constructor(private service: PostService, private route: ActivatedRoute) {
    }
 
   ngOnInit(): void {
@@ -28,8 +28,8 @@ export class CreatePostComponent implements OnInit {
   createPost(inputPostTitle: string, inputPostContent: string, id: number) {
     this.service.postPost(inputPostTitle, inputPostContent, id).subscribe((newPost: Post)=>{
       this.posts.push(newPost)
+      window.location.reload()
     })
-    this.router.navigateByUrl('posts/Blogs/' + this.id)
   }
 }
 

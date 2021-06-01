@@ -13,8 +13,6 @@ export class PostService {
   private posts: Post[] = []
   posts$ : Observable<Post[]>
 
-  blogId: number = 0
-
   constructor(private http: HttpClient) { }
 
   getPosts(blogId: number): Observable<Blog> {
@@ -31,7 +29,6 @@ export class PostService {
   }
 
   deletePost(postId: number, blogId:number): Observable<Post> {
-    blogId = this.blogId
     return this.http.delete<Post>('https://mi-blogs.azurewebsites.net/api/Posts/'+ postId)
   }
 

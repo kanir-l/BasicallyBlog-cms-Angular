@@ -7,14 +7,16 @@
             <b>{{blog.title}}</b>
         </p>
     </a> 
-    <a routerLink="/edit/Blogs/{{blog.id}}" 
-        routerLinkActive="active" 
-        [routerLinkActiveOptions] = "{exact: true}">
-        <button>
-            <img [src] = 'imageEdit'>
-        </button>
-    </a> 
-    <button (click) = "handleRemove()">
-        <img [src] = "imageBin">
-    </button> 
+    <div class = "button-wrap">
+        <button (click) = "handleRemove()">
+            <img [src] = "imageBin">
+        </button> 
+        <a routerLink="/edit/Blogs/{{blog.id}}" 
+            routerLinkActive="active" 
+            [routerLinkActiveOptions] = "{exact: true}">
+            <button>
+                <img [src] = 'imageEdit'>
+            </button>
+        </a> 
+    </div>
 </div>

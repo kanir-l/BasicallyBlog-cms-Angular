@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { PostsComponent } from '../components/posts/posts.component';
 import { Blog } from '../models/Blog';
 import { Comment } from '../models/Comment';
 import { Post } from '../models/Post';

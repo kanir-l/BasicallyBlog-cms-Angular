@@ -17,7 +17,6 @@ import { CreateCommentComponent } from './components/create-comment/create-comme
 import { UpdateBlogComponent } from './components/update-blog/update-blog.component';
 import { UpdatePostComponent } from './components/update-post/update-post.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,

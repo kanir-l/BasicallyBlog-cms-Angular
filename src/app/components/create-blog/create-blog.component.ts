@@ -1,5 +1,5 @@
 import { Component, OnInit} from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Blog } from 'src/app/models/Blog';
 import { BlogService } from 'src/app/services/blog.service';
 
@@ -12,14 +12,20 @@ import { BlogService } from 'src/app/services/blog.service';
 export class CreateBlogComponent implements OnInit {
   blogs: Blog[] = []
 
-  constructor(private service: BlogService, private router: Router) { }
+  constructor(private service: BlogService, private route: ActivatedRoute, private router: Router) {
+    route.params.subscribe(val => {
+      this.service.getBlogs().subscribe((blogs: Blog[]) => {
+        this.blogs = blogs.reverse()
+      })
+    })
+   }
 
   ngOnInit(): void { }
 
   createBlog(inputBlogTitle: string) {
     this.service.postBlog(inputBlogTitle).subscribe((newBlog: Blog)=>{
       this.blogs.push(newBlog)
+      this.router.navigateByUrl('/blogs')
     })
-    this.router.navigateByUrl('/blogs')
   }
 }

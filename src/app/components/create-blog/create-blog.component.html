@@ -3,8 +3,8 @@
         <div class = "input-blog">
             <h3>Create the blog</h3>
             <div class = "input-box">
-                <input type="text" placeholder="Your blog name" #title/>
-                <button (click) = "createBlog(title.value)" required>Submit Blog</button>  
+                <input type="text" minlength="2" placeholder="Your blog name" #title />
+                <button (click) = "createBlog(title.value)">Submit Blog</button>  
             </div>
         </div>
     </div>
