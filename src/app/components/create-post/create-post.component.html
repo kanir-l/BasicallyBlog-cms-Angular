@@ -1,15 +1,14 @@
 <div class = "create-post">
     <div class = "post-container">
-       
         <div class = "input-post">
         <h3>Create the post. Blog: {{id}}</h3>
+        
         <h3>Your Post Title</h3>    
         <input type="text" placeholder="Title" #title required/>
         <h3>Your Content</h3>  
         <textarea type="text" placeholder="Content" #content required></textarea>
-
         <div class = "button-box">
-            <button (click) = "createPost(title.value, content.value, id)">Add Blog</button>   
+            <button (click) = "createPost(title.value, content.value, id)">Submit Post</button>   
         </div>
         </div>
     </div>

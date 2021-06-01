@@ -4,6 +4,7 @@ import { Comment } from 'src/app/models/Comment';
 import { Post } from 'src/app/models/Post';
 import { CommentService } from 'src/app/services/comment.service';
 
+
 @Component({
   selector: 'app-comments',
   templateUrl: './comments.component.html',
@@ -23,7 +24,7 @@ export class CommentsComponent implements OnInit {
     })
 
     this.service.getComments(this.id).subscribe((post) => {
-      this.comments = post.comments
+      this.comments = post.comments.reverse()
       this.post = post
     })
   }

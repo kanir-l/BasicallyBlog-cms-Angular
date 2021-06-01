@@ -1,0 +1,11 @@
+<div class = "create-blog-edit">
+    <div class = edit-container>
+        <div class = "input-blog">
+            <h3>Edit your blog name</h3>
+            <div class = "input-box" *ngIf = "blog">
+                <input type="text" value="{{blog.title}}" #title />
+                <button (click) = "updateBlog(title.value, blog.id)">Save the edit</button>  
+            </div>
+        </div>
+    </div>
+</div>

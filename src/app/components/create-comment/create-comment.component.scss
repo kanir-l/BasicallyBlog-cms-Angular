@@ -1,0 +1,41 @@
+.create-comment {
+    .comment-container {
+        .input-comment {
+            width: 100%;
+            background: transparent;
+            border: 1px solid #ffffff;
+            padding: 30px;
+
+            h3 {
+                color: #ffffff;
+            }
+        
+            input {
+                width: 100%;
+                height: 45px;
+                font-family: 'Alegreya Sans SC', sans-serif;
+                color: #ffffff;
+                border: none;
+                border-radius: 3px;
+                display: block;
+                padding: 10px;
+                box-sizing: border-box;
+            }
+
+            .button-box {
+                width: 100%;
+
+                button {
+                    width: 100%;
+                    height: 45px;
+                    font-family: 'Alegreya Sans SC', sans-serif;
+                    margin-top: 20px;
+                    background: #3a3a3a;
+                    color: #ffffff;
+                    border: none;
+                    border-radius: 3px;
+                }
+            }
+        }
+    }
+}

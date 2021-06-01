@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Comment } from 'src/app/models/Comment';
 import { CommentService } from 'src/app/services/comment.service';
 
+
 @Component({
   selector: 'app-create-comment',
   templateUrl: './create-comment.component.html',
@@ -22,10 +23,9 @@ export class CreateCommentComponent implements OnInit {
   }
 
   createComment(inputCommentText: string, id: number){
-    this.service.addComment(inputCommentText, id).subscribe((newComment: Comment) => {
+    this.service.postComment(inputCommentText, id).subscribe((newComment: Comment) => {
       this.comments.push(newComment)
       console.log(newComment)
     })
   }
-
 }

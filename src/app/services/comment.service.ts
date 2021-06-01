@@ -28,7 +28,7 @@ export class CommentService {
     }
   }
 
-  addComment(content: string, postId: number): Observable<Comment> {
+  postComment(content: string, postId: number): Observable<Comment> {
     return this.http.post<Comment>('https://mi-blogs.azurewebsites.net/api/Comments/', {content, postId})
   }
 

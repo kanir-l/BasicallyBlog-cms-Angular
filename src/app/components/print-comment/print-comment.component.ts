@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Comment } from 'src/app/models/Comment';
 
+
 @Component({
   selector: 'app-print-comment',
   templateUrl: './print-comment.component.html',
@@ -19,7 +20,5 @@ export class PrintCommentComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void { }
 }

@@ -1,11 +1,11 @@
 .print-comment {
-    width: 90%;
+    width: 100%;
     display: flex;
     align-items: flex-start;
     margin-top: 20px;
 
     .print-box {
-        width: 45%;
+        width: 100%;
         height: auto;
         background: #ffffff;
         border-radius: 10px;
@@ -31,7 +31,6 @@
             width: 80%;
             font-family: 1rem;
         }
-    
     }
 }
 

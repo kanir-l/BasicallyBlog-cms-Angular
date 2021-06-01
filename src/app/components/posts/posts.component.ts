@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Blog } from 'src/app/models/Blog';
 import { Post } from 'src/app/models/Post';
@@ -31,8 +31,8 @@ export class PostsComponent implements OnInit {
     })
   }
 
-  removePost(postId: number, postIndex: number): void {
-    this.service.deletePost(postId).subscribe(() => {
+  removePost(postId: number, postIndex: number, blogId: number): void {
+    this.service.deletePost(postId, blogId).subscribe(() => {
       this.posts.splice(postIndex, 1)
     })
   }
