@@ -2,12 +2,12 @@
 
 <div class = "blogs">
     <h3>My Blogs</h3>
-    
+
     <div class = "all-blogs">
         <app-print-blog *ngFor = "let blog of blogs; let i = index" 
         [blog] = "blog" 
         (clickRemove) = "removeBlog(blog.id, i)">
         </app-print-blog> 
-    </div>
+    </div> 
 </div>
 

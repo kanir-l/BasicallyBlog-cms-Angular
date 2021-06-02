@@ -11,7 +11,8 @@
 
 <div class = "wrap-comments">
     <div class = "comments">
-        <app-create-comment></app-create-comment>
+        <app-create-comment (addedComment)="addComment($event)" ></app-create-comment>
+
         <div class = "all-comments">
             <app-print-comment *ngFor = "let comment of comments; let i = index" [comment] = "comment" (clickRemove) = "removeComment(comment.id, i)">
             </app-print-comment> 

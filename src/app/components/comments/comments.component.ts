@@ -29,6 +29,11 @@ export class CommentsComponent implements OnInit {
     })
   }
 
+  addComment(comment: Comment): void {
+    console.log('Ran');
+    this.comments.push(comment)
+  }
+
   removeComment(commentId: number, commentIndex: number): void {
     this.service.deleteComment(commentId).subscribe(() => {
       this.comments.splice(commentIndex, 1)

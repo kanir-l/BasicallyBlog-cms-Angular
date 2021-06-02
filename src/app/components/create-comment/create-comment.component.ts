@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Comment } from 'src/app/models/Comment';
 import { CommentService } from 'src/app/services/comment.service';
@@ -10,7 +10,8 @@ import { CommentService } from 'src/app/services/comment.service';
   styleUrls: ['./create-comment.component.scss']
 })
 export class CreateCommentComponent implements OnInit {
-  @Input() comments: Comment[] = []
+  //comments: Comment[] = [] //Output with the function sent with new comment, and push with another function in the comment component instead//
+  @Output() addedComment = new EventEmitter<Comment>();
 
   id: number = 0
 
@@ -24,8 +25,8 @@ export class CreateCommentComponent implements OnInit {
 
   createComment(inputCommentText: string, id: number){
     this.service.postComment(inputCommentText, id).subscribe((newComment: Comment) => {
-      this.comments.push(newComment)
-      window.location.reload()
+      // this.comments.push(newComment) //Moved to comment component where view the comments instead// 
+      this.addedComment.emit(newComment);
     })
   }
 }

@@ -25,7 +25,8 @@ export class CreateBlogComponent implements OnInit {
   createBlog(inputBlogTitle: string) {
     this.service.postBlog(inputBlogTitle).subscribe((newBlog: Blog)=>{
       this.blogs.push(newBlog)
-      this.router.navigateByUrl('/blogs')
+
+      this.router.navigateByUrl('/posts/Blogs/' + newBlog.id)
     })
   }
 }
