@@ -7,8 +7,7 @@ import { Blog } from '../models/Blog';
   providedIn: 'root'
 })
 export class BlogService {
-  private blogs: Blog[] = []
-  blogs$ : Observable<Blog[]>
+  blogs: Blog[] = []
 
   constructor(private http: HttpClient) { }
 

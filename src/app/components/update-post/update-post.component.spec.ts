@@ -1,4 +1,6 @@
+import { HttpClientModule } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { AppRoutingModule } from 'src/app/app-routing.module';
 
 import { UpdatePostComponent } from './update-post.component';
 
@@ -8,7 +10,8 @@ describe('UpdatePostComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ UpdatePostComponent ]
+      declarations: [ UpdatePostComponent ],
+      imports: [HttpClientModule, AppRoutingModule],
     })
     .compileComponents();
   });

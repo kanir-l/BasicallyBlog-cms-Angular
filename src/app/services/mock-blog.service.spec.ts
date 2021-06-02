@@ -1,16 +1,15 @@
 import { HttpClientModule } from '@angular/common/http';
 import { TestBed } from '@angular/core/testing';
+import { MockBlogService } from './mock-blog.service';
 
-import { PostService } from './post.service';
-
-describe('PostService', () => {
-  let service: PostService;
+describe('MockBlogService', () => {
+  let service: MockBlogService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports : [ HttpClientModule ]
     });
-    service = TestBed.inject(PostService);
+    service = TestBed.inject(MockBlogService);
   });
 
   it('should be created', () => {
