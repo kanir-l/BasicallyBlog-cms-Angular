@@ -6,7 +6,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "BackToBlog-CMS-Angular": {
+    "BasicallyBlog-CMS-Angular": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/BackToBlog-CMS-Angular",
+            "outputPath": "dist/BasicallyBlog-CMS-Angular",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -68,18 +68,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "BackToBlog-CMS-Angular:build"
+            "browserTarget": "BasicallyBlog-CMS-Angular:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "BackToBlog-CMS-Angular:build:production"
+              "browserTarget": "BasicallyBlog-CMS-Angular:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "BackToBlog-CMS-Angular:build"
+            "browserTarget": "BasicallyBlog-CMS-Angular:build"
           }
         },
         "test": {
@@ -116,16 +116,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "BackToBlog-CMS-Angular:serve"
+            "devServerTarget": "BasicallyBlog-CMS-Angular:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "BackToBlog-CMS-Angular:serve:production"
+              "devServerTarget": "BasicallyBlog-CMS-Angular:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "BackToBlog-CMS-Angular"
+  "defaultProject": "BasicallyBlog-CMS-Angular"
 }
