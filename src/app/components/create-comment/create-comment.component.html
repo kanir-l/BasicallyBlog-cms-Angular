@@ -4,7 +4,7 @@
             <h3>Your comment for Post: {{id}}</h3>   
             <input type="text" placeholder="Text" [ngModel] ="inputCommentText" #text required />
             <div class = "button-box">
-                <button [disabled]="!text.value" (click) = "createComment(text.value, id) text.value=''">Submit comment</button>   
+                <button [disabled]="!text.value" (click) = "createComment(text.value, id); text.value=''">Submit comment</button>   
             </div>
         </div>
     </div>
