@@ -11,8 +11,9 @@ import { PostService } from 'src/app/services/post.service';
 })
 export class CreatePostComponent implements OnInit {
   posts: Post[] = []
-  title: string
-  content: string
+  
+  inputPostTitle: string = ""
+  inputPostContent: string = ""
 
   id: number = 0
 

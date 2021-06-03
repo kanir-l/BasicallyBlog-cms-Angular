@@ -1,4 +1,4 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit, Output} from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Blog } from 'src/app/models/Blog';
 import { BlogService } from 'src/app/services/blog.service';
@@ -11,6 +11,8 @@ import { BlogService } from 'src/app/services/blog.service';
 })
 export class CreateBlogComponent implements OnInit {
   blogs: Blog[] = []
+
+  inputBlogTitle : string = ""
 
   constructor(private service: BlogService, private route: ActivatedRoute, private router: Router) {
     route.params.subscribe(val => {

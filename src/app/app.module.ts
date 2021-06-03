@@ -16,6 +16,7 @@ import { PrintCommentComponent } from './components/print-comment/print-comment.
 import { CreateCommentComponent } from './components/create-comment/create-comment.component';
 import { UpdateBlogComponent } from './components/update-blog/update-blog.component';
 import { UpdatePostComponent } from './components/update-post/update-post.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { UpdatePostComponent } from './components/update-post/update-post.compon
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

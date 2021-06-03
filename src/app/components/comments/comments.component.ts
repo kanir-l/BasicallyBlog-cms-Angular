@@ -30,7 +30,6 @@ export class CommentsComponent implements OnInit {
   }
 
   addComment(comment: Comment): void {
-    console.log('Ran');
     this.comments.push(comment)
   }
 

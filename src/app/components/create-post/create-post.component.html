@@ -4,11 +4,11 @@
         <h3>Create the post. Blog: {{id}}</h3>
         
         <h3>Your Post Title</h3>    
-        <input type="text" placeholder="Title" #title required/>
+        <input type="text" placeholder="Title" [ngModel] ="inputPostTitle" #title />
         <h3>Your Content</h3>  
-        <textarea type="text" placeholder="Content" #content required></textarea>
+        <textarea type="text" placeholder="Content" [ngModel] ="inputPostContent" #content ></textarea>
         <div class = "button-box">
-            <button (click) = "createPost(title.value, content.value, id)">Submit Post</button>   
+            <button [disabled]="!title.value && !content.value"(click) = "createPost(title.value, content.value, id)">Submit Post</button>   
         </div>
         </div>
     </div>

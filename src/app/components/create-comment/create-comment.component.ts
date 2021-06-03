@@ -13,6 +13,8 @@ export class CreateCommentComponent implements OnInit {
   //comments: Comment[] = [] //Output with the function sent with new comment, and push with another function in the comment component instead//
   @Output() addedComment = new EventEmitter<Comment>();
 
+  inputCommentText: string = ""
+
   id: number = 0
 
   constructor(private service: CommentService, private route: ActivatedRoute) { }
