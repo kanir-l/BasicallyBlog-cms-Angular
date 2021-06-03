@@ -1,0 +1,64 @@
+* {
+    font-family: 'Alegreya Sans SC', sans-serif;
+}
+
+.create-post-edit {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30px;
+
+    .edit-container {
+        width: 80%;
+        display: flex;
+
+        .post-img {
+            width: 100%;
+            height:200px;
+            background-image: url("/../assets/img/post-image.jpeg");
+            background-size: cover;
+            background-position: center;
+            opacity: 80%;
+            margin-bottom: 20px;
+        }
+           
+        .input-post-edit {
+            width: 100%;
+            background: transparent;
+            border: 1px solid #ffffff;
+            padding: 30px;
+            box-sizing: border-box;
+        
+            input, textarea {
+                width: 100%;
+                height: 45px;
+                border: none;
+                display: block;
+                border-radius: 3px;
+                padding: 10px;
+                box-sizing: border-box;
+            }
+
+            textarea{
+                height: 450px;
+            }
+
+            .button-box {
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
+
+                button {
+                    width: 200px;
+                    height: 45px;
+                    margin-top: 30px;
+                    background: #3a3a3a;
+                    color: #ffffff;
+                    border: none;
+                    border-radius: 3px;
+                }
+            }
+        }
+    }
+}

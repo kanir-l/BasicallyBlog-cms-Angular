@@ -1,14 +1,22 @@
 <div class = "print-blog">
-    <a routerLink="/create-post/Blogs/{{blog.id}}" routerLinkActive="active" [routerLinkActiveOptions] = "{ exact: true }" class = "blog-box">
-        <p>www.basicallyblog.com/<br><b>{{blog.title}}</b></p>
+    <a routerLink="/posts/Blogs/{{blog.id}}" 
+        routerLinkActive="active" 
+        [routerLinkActiveOptions] = "{exact: true}" class = "blog-box">
+        <p>www.basicallyblog.com/
+            <br>
+            <b>{{blog.title}}</b>
+        </p>
     </a> 
-    <button>
-        <img [src] = 'imageEdit'>
-    </button> 
-    <button (click) = 'handleRemove()'>
-        <img [src] = 'imageBin'>
-    </button> 
-    
+    <div class = "button-wrap">
+        <button (click) = "handleRemove()">
+            <img [src] = "imageBin">
+        </button> 
+        <a routerLink="/edit/Blogs/{{blog.id}}" 
+            routerLinkActive="active" 
+            [routerLinkActiveOptions] = "{exact: true}">
+            <button>
+                <img [src] = 'imageEdit'>
+            </button>
+        </a> 
+    </div>
 </div>
-
-<script></script>

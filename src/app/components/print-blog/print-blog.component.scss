@@ -8,9 +8,8 @@
         background-size: cover;
         background-position: top;
         opacity: 75%;
-        width: 400px;
+        width: 450px;
         height: 250px;
-        border-radius: 10px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -19,28 +18,32 @@
         p {
             font-size: 1rem;
             color: #3b3b3b;
-            width: 400px;
+            width: 450px;
             text-align: center;
             background: #ffffff;
 
             b {
                 font-size: 1.6rem;
                 font-weight: bold;
-                font-style: italic;
                 color: #000000;
             }
         }
     }
 
-    button {
-        border: 0;
-        height: 250px;
-        border-radius: 2px;
-        margin-right: 1px;
-        background: #ece0e0;
-        
-        img {
-            width: 20px;
+    .button-wrap {
+        position: absolute;
+
+        button {
+            border: 0;
+            height: 30px;
+            margin-right: 1px;
+            background: #ffffff;
+            opacity: 60%;
+            border-radius: 2px;
+
+            img {
+                width: 20px;
+            }
         }
     }
 }

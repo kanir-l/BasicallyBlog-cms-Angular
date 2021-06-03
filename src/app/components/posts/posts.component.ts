@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Blog } from 'src/app/models/Blog';
 import { Post } from 'src/app/models/Post';
@@ -11,15 +11,14 @@ import { PostService } from 'src/app/services/post.service';
   styleUrls: ['./posts.component.scss']
 })
 export class PostsComponent implements OnInit {
-  posts: Post[] = [] //Getting Post array
-  blog: Blog //Getting just one blog sent from service
+  posts: Post[] = [] //Making variable for Post array
+  blog: Blog //Getting just one specific blog sent from service
 
   id: number = 0
  
   constructor(private service: PostService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-
     this.route.paramMap.subscribe((params) => {
       this.id = parseInt(params.get('id'))
     })
@@ -32,8 +31,8 @@ export class PostsComponent implements OnInit {
     })
   }
 
-  removePost(postId: number, postIndex: number): void {
-    this.service.deletePost(postId).subscribe(() => {
+  removePost(postId: number, postIndex: number, blogId: number): void {
+    this.service.deletePost(postId, blogId).subscribe(() => {
       this.posts.splice(postIndex, 1)
     })
   }

@@ -1,4 +1,6 @@
+import { HttpClientModule } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { AppRoutingModule } from 'src/app/app-routing.module';
 
 import { PrintBlogComponent } from './print-blog.component';
 
@@ -8,7 +10,8 @@ describe('PrintBlogComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PrintBlogComponent ]
+      declarations: [ PrintBlogComponent ],
+      imports: [HttpClientModule, AppRoutingModule],
     })
     .compileComponents();
   });

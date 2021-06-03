@@ -1,0 +1,21 @@
+<div class = "print-post" *ngIf = "post">
+    <div class = "print-box">
+        <div class = "post-img"></div>
+        <h3>{{post.title}}</h3>
+        <br>
+        <p>{{post.content}}</p>
+        <br>
+        <i>Publised: {{post.created}}</i>
+    </div>
+</div>
+
+<div class = "wrap-comments">
+    <div class = "comments">
+        <app-create-comment (addedComment)="addComment($event)" ></app-create-comment>
+
+        <div class = "all-comments">
+            <app-print-comment *ngFor = "let comment of comments; let i = index" [comment] = "comment" (clickRemove) = "removeComment(comment.id, i)">
+            </app-print-comment> 
+        </div>
+    </div>
+</div>

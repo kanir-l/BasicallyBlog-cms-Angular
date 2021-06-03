@@ -1,7 +1,8 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router} from '@angular/router';
 import { Post } from 'src/app/models/Post';
 import { PostService } from 'src/app/services/post.service';
+
 
 @Component({
   selector: 'app-create-post',
@@ -9,9 +10,10 @@ import { PostService } from 'src/app/services/post.service';
   styleUrls: ['./create-post.component.scss']
 })
 export class CreatePostComponent implements OnInit {
-  @Input() posts: Post[] = []
-  title: string
-  content: string
+  posts: Post[] = []
+  
+  inputPostTitle: string = ""
+  inputPostContent: string = ""
 
   id: number = 0
 
@@ -24,19 +26,11 @@ export class CreatePostComponent implements OnInit {
     }) 
   }
 
-  inputTitle(inputItem: string): void {
-    this.title = inputItem
-  }
-
-  inputContent(inputItem: string): void {
-    this.content = inputItem
-  }
-
   createPost(inputPostTitle: string, inputPostContent: string, id: number) {
-    this.service.addPost(inputPostTitle, inputPostContent, id).subscribe((newPost: Post)=>{
+    this.service.postPost(inputPostTitle, inputPostContent, id).subscribe((newPost: Post)=>{
       this.posts.push(newPost)
-
-      this.router.navigateByUrl('create-post/Blogs/' + this.id)
+      
+      this.router.navigateByUrl('/comments/Posts/' + newPost.id)
     })
   }
 }

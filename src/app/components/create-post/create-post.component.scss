@@ -14,10 +14,10 @@
         display: flex;
            
         .input-post {
-        width: 100%;
-        background: transparent;
-        border: 1px solid #ffffff;
-        padding: 30px;
+            width: 100%;
+            background: transparent;
+            border: 1px solid #ffffff;
+            padding: 30px;
         
             input, textarea {
                 width: 100%;
@@ -31,6 +31,10 @@
 
             textarea{
                 height: 450px;
+            }
+
+            h3 {
+                color: #ffffff;
             }
 
             .button-box {

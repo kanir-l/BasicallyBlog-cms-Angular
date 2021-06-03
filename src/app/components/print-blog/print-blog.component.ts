@@ -20,7 +20,5 @@ export class PrintBlogComponent implements OnInit {
 
   constructor(private service: BlogService) { }
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void { }
 }

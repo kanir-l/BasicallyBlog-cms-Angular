@@ -1,0 +1,15 @@
+<div class = "create-post-edit">
+    <div class = "edit-container">
+        <div class = "input-post-edit" *ngIf = "post">
+            <h1>Edit your post</h1>
+            <div class = "post-img"></div>
+            <h3>Your Post Title</h3>    
+            <input type="text" value="{{post.title}}" #title />
+            <h3>Your Content</h3>  
+            <textarea type="text" value="{{post.content}}" #content></textarea>
+            <div class = "button-box">
+                <button (click) = "updatePost(title.value, content.value, post.id, post.blogId)">Save the edit</button>   
+            </div>
+        </div>
+    </div>
+</div>

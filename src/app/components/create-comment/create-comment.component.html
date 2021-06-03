@@ -1,0 +1,11 @@
+<div class = "create-comment">
+    <div class = "comment-container">
+        <div class = "input-comment">
+            <h3>Your comment for Post: {{id}}</h3>   
+            <input type="text" placeholder="Text" [ngModel] ="inputCommentText" #text required />
+            <div class = "button-box">
+                <button [disabled]="!text.value" (click) = "createComment(text.value, id)">Submit comment</button>   
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,36 @@
+.print-comment {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+
+    .print-box {
+        width: 100%;
+        height: auto;
+        background: #ffffff;
+        border-radius: 10px;
+        opacity: 60%;
+        padding: 30px;
+    
+        u {
+            color: #3a3a3a;
+        }
+    
+        button {
+            border: 0;
+            height: 20px;
+            background: transparent;
+        
+            img {
+                width: 20px;
+            }
+        }
+        
+        p {
+            color: #3a3a3a;
+            width: 80%;
+            font-family: 1rem;
+        }
+    }
+}
+
